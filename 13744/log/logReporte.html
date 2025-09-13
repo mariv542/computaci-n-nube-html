@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Seguridad en el Proyecto Azure</title>
+
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 40px;
+
+            background: #f8f9fa;
+
+            line-height: 1.6;
+
+            color: #333;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #2c3e50;
+
+            margin-bottom: 30px;
+
+        }
+
+        h2 {
+
+            color: #34495e;
+
+            margin-top: 30px;
+
+        }
+
+        p {
+
+            margin-bottom: 15px;
+
+        }
+
+        .card {
+
+            background: #fff;
+
+            padding: 20px;
+
+            margin: 15px 0;
+
+            border-radius: 8px;
+
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .final {
+
+            background: #e9f7ef;
+
+            border-left: 6px solid #2ecc71;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Seguridad Aplicada en el Proyecto Azure</h1>
+
+
+
+    <div class="card">
+
+        <h2>Generación de Claves de Acceso</h2>
+
+        <p>
+
+            Durante la creación de la máquina virtual Ubuntu 24.04 (9:18 – 9:26)
+
+            se implementaron <strong>claves SSH</strong> como método de autenticación.
+
+            Esto reemplaza contraseñas tradicionales por un sistema más robusto
+
+            y difícil de vulnerar.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>Apertura de Puertos Controlada</h2>
+
+        <p>
+
+            A las 9:31 se habilitaron únicamente los puertos
+
+            <strong>80 (HTTP)</strong> y <strong>22 (SSH)</strong>.
+
+            Esta práctica sigue el principio de “mínimo acceso”,
+
+            reduciendo la exposición de la máquina a posibles ataques.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>Acceso mediante Bastion</h2>
+
+        <p>
+
+            El ingreso a la máquina (9:40) se realizó con <strong>Azure Bastion</strong>,
+
+            evitando exponer directamente la IP pública de la máquina.
+
+            Bastion actúa como una capa intermedia que refuerza la seguridad
+
+            de las conexiones remotas.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>Actualizaciones del Sistema</h2>
+
+        <p>
+
+            Antes de instalar servicios (9:41), se ejecutó
+
+            <code>sudo apt update</code> para garantizar que los paquetes
+
+            estuvieran actualizados, cerrando posibles brechas de seguridad.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>Instalación y Verificación de Servicios</h2>
+
+        <p>
+
+            Se instaló <strong>Apache2</strong> (9:42) y posteriormente
+
+            <strong>Git</strong> (9:46). En ambos casos se verificó su
+
+            funcionamiento (9:45), asegurando una configuración correcta
+
+            que minimiza riesgos de exposición indebida.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>Gestión de Archivos y Organización</h2>
+
+        <p>
+
+            El archivo por defecto <code>index.html</code> fue eliminado (9:48)
+
+            para evitar mostrar información no deseada. Luego, se creó la carpeta
+
+            <strong>ID_13744</strong> (9:53), lo que contribuye a mantener una
+
+            estructura ordenada y segura en el proyecto.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card final">
+
+        <h2>Resumen Final</h2>
+
+        <p>
+
+            Las medidas de seguridad aplicadas abarcaron desde la creación
+
+            de claves seguras, apertura restringida de puertos, uso de
+
+            Bastion para accesos, instalación controlada de servicios y
+
+            una correcta organización de archivos. Todo ello permitió
+
+            configurar un entorno sólido y confiable en Azure.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="card final">
+
+        <h2>Arquitectura de Seguridad Aplicada</h2>
+
+        <p>
+
+            La arquitectura de seguridad se basó en los siguientes pilares:
+
+        </p>
+
+        <ul>
+
+            <li><strong>Autenticación Segura:</strong> uso de claves SSH.</li>
+
+            <li><strong>Control de Accesos:</strong> puertos mínimos abiertos (80 y 22).</li>
+
+            <li><strong>Capa Intermedia:</strong> conexión mediante Azure Bastion.</li>
+
+            <li><strong>Prevención:</strong> actualizaciones constantes de paquetes.</li>
+
+            <li><strong>Verificación:</strong> chequeo del funcionamiento de servicios.</li>
+
+            <li><strong>Organización:</strong> estructura limpia de archivos y carpetas.</li>
+
+        </ul>
+
+    </div>
+
+
+
+    <div class="card final">
+
+        <h2>Conclusión</h2>
+
+        <p>
+
+            Gracias a la aplicación de estas medidas, el despliegue de la
+
+            máquina virtual en Azure se realizó bajo un marco seguro,
+
+            minimizando vulnerabilidades y siguiendo buenas prácticas
+
+            de administración en la nube.
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
